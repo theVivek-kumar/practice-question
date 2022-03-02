@@ -3,19 +3,48 @@
   text-align: center;
 }
 .btn1 {
+  gap: 3rem;
   border: none;
   background-color: blue;
   color: antiquewhite;
   padding: 0.3rem;
   border-radius: 0.5rem;
-  margin-left: 1rem;
+  margin: auto;
+  width: 3rem;
+
+ 
+}
+.btn{
+  background-color: green;
+
 }
 .input-2 {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  gap: 3rem;
 }
 .input-1 {
   border: none;
   color: gray;
   border-bottom: darkcyan 2px solid;
+}
+.input-3{
+  padding: 1rem;
+} 
+.twitter{
+  display: flex;
+  flex-direction:column;
+  margin:auto;
+  gap:2rem;
+  margin: 1rem;
+ 
+}
+.question{
+  width: 100%;
+  border:1px solid black;
+  display: flex;
+  flex-direction:column;
+  dis
+
 }
