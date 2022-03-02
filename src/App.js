@@ -4,9 +4,11 @@ import { useState } from "react";
 export default function App() {
   const [pass1, setpass1] = useState();
   const [pass2, setpass2] = useState();
-  const [result, setresult] = useState("");
+  const [result, setresult] = useState();
   const [text, settext] = useState();
   const [counter, setcounter] = useState(40);
+  const [Password, setPassword] = useState();
+  const [msg, setmsg] = useState();
 
   console.log(pass1, pass2);
 
@@ -24,6 +26,17 @@ export default function App() {
     console.log("twitter");
     const textvalue = text.length;
     console.log(textvalue);
+  }
+  function passwordCheck() {
+    let decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    let testPassword = decimal.test(Password);
+    if (testPassword) {
+      console.log("Correct");
+      setmsg("strong-password");
+    } else {
+      console.log("in-Correct");
+      setmsg("weak-password");
+    }
   }
 
   return (
@@ -63,6 +76,23 @@ export default function App() {
             tweet
           </button>
         </div>
+      </div>
+      <h1> alphanumeric password</h1>
+      <div className="question">
+        <p>
+          password should contain one uppercase 1 lowercase and special
+          chaaracter
+        </p>
+        <input
+          className="input-3"
+          placeholder="what's happning"
+          value={Password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <h3>{msg}</h3>
+        <button className="btn1 btn" onClick={passwordCheck}>
+          submit
+        </button>
       </div>
     </div>
   );
