@@ -1,0 +1,21 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.btn1 {
+  border: none;
+  background-color: blue;
+  color: antiquewhite;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+.input-2 {
+  display: flex;
+  justify-content: space-around;
+}
+.input-1 {
+  border: none;
+  color: gray;
+  border-bottom: darkcyan 2px solid;
+}
