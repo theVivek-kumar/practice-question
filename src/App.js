@@ -9,6 +9,8 @@ export default function App() {
   const [counter, setcounter] = useState(40);
   const [Password, setPassword] = useState();
   const [msg, setmsg] = useState();
+  const [previoustoggle, setprevioustoggle] = useState("show");
+  const [previous, setprevious] = useState();
 
   console.log(pass1, pass2);
 
@@ -37,6 +39,10 @@ export default function App() {
       console.log("in-Correct");
       setmsg("weak-password");
     }
+  }
+  function showPassword() {
+    if (previoustoggle === "show") setprevioustoggle("hide");
+    setprevious("text");
   }
 
   return (
@@ -92,6 +98,30 @@ export default function App() {
         <h3>{msg}</h3>
         <button className="btn1 btn" onClick={passwordCheck}>
           submit
+        </button>
+      </div>
+      <h1> show password</h1>
+      <div className="question">
+        <p>
+          <ul>
+            <li> Put a button show password near the input element.</li>
+            <li>
+              {" "}
+              Text on show password should change to hide password when password
+              is shown..
+            </li>
+          </ul>
+        </p>
+        <input
+          className="input-3"
+          placeholder="password"
+          value={previous}
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <h3>{msg}</h3>
+        <button className="btn1 btn" onClick={showPassword}>
+          {previoustoggle}
         </button>
       </div>
     </div>

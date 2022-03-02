@@ -7,16 +7,17 @@
   border: none;
   background-color: blue;
   color: antiquewhite;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   margin: auto;
-  width: 3rem;
+  width: auto;
 
  
 }
 .btn{
   background-color: green;
   margin-top:3rem;
+  margin-bottom: .5rem;
 
 }
 .input-2 {
