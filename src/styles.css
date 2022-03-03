@@ -27,6 +27,8 @@
   gap: 3rem;
 }
 .input-1 {
+  margin:2rem;
+  padding: 1rem;
   border: none;
   color: gray;
   border-bottom: darkcyan 2px solid;
